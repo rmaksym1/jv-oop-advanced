@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_FIGURES = 4;
+    public static final int MAX_FIGURES = 5;
     public static final int MAX_PROPERTIES = 10;
 
     private Random rand = new Random();
