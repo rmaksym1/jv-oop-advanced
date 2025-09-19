@@ -4,10 +4,10 @@ package core.basesyntax;
  * Feel free to remove this class and create your own.
  */
 public class Main {
-    private Figure[] figures = new Figure[5];
-    private FigureSupplier supplier = new FigureSupplier();
+    public static void main(String[] args) {
+        Figure[] figures = new Figure[5];
+        FigureSupplier supplier = new FigureSupplier();
 
-    public void main(String[] args) {
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = (Figure) supplier.getRandomFigure();
         }
@@ -17,8 +17,14 @@ public class Main {
         }
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i].getInfo();
+            draw(figures[i].getClass().getSimpleName(),
+                    figures[i].getArea(), figures[i].getColor());
         }
     }
 
+    public static void draw(String figure, double area, String color) {
+        System.out.println("Figure: " + figure + ","
+                + " area: " + area + " sq. units, "
+                + "color: " + color);
+    }
 }

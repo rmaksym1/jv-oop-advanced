@@ -1,9 +1,12 @@
 package core.basesyntax;
 
 public abstract class Figure implements IFigure {
-    private String color;
+    protected String color;
 
-    public abstract int getArea();
+    public String getColor() {
+        return color;
+    }
 
-    public abstract String getInfo();
+    public abstract double getArea();
+
 }

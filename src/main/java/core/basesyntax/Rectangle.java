@@ -1,10 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private String color;
     private int length;
     private int width;
-    private int area = length * width;
 
     public Rectangle(int length, int width, String color) {
         this.length = length;
@@ -12,14 +10,13 @@ public class Rectangle extends Figure {
         this.color = color;
     }
 
-    public int getArea() {
-        return area;
+    @Override
+    public String getColor() {
+        return color;
     }
 
     @Override
-    public String getInfo() {
-        return "Figure: " + getClass().getSimpleName()
-                + " area: " + area + " sq. units, "
-                + "color: " + color;
+    public double getArea() {
+        return length * width;
     }
 }

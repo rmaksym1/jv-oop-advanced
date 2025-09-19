@@ -1,15 +1,9 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
-    private Random rand = new Random();
-
-    private String color;
     private int base;
     private int base2;
     private int height;
-    private final int area = ((base + base2) / 2) * height;
 
     public IsoscelesTrapezoid(int base, int base2, int height, String color) {
         this.color = color;
@@ -18,14 +12,13 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getArea() {
-        return area;
+    @Override
+    public String getColor() {
+        return color;
     }
 
     @Override
-    public String getInfo() {
-        return "Figure: " + getClass().getSimpleName()
-                + " area: " + area + " sq. units, "
-                + "color: " + color;
+    public double getArea() {
+        return (base + base2) / 2.0 * height;
     }
 }
