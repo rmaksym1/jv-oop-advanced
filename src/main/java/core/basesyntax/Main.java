@@ -17,14 +17,7 @@ public class Main {
         }
 
         for (int i = 0; i < figures.length; i++) {
-            draw(figures[i].getClass().getSimpleName(),
-                    figures[i].getArea(), figures[i].getColor());
+            figures[i].draw();
         }
-    }
-
-    public static void draw(String figure, double area, String color) {
-        System.out.println("Figure: " + figure + ","
-                + " area: " + area + " sq. units, "
-                + "color: " + color);
     }
 }

@@ -4,19 +4,21 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(int length, int width, String color) {
+    public Rectangle(int length, int width, Color color) {
         this.length = length;
         this.width = width;
         this.color = color;
     }
 
     @Override
-    public String getColor() {
-        return color;
+    public double getArea() {
+        return length * width;
     }
 
     @Override
-    public double getArea() {
-        return length * width;
+    public void draw() {
+        System.out.println("Figure: " + this.getClass().getSimpleName() + ","
+                + " area: " + getArea() + " sq. units, "
+                + "color: " + color);
     }
 }
