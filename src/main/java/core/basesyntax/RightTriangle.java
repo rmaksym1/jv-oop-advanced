@@ -11,11 +11,6 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public Color getColor() {
-        return color;
-    }
-
-    @Override
     public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
